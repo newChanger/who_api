@@ -1,9 +1,18 @@
 import requests
-import json
+#import json
 
 from requests.models import Response
 
 ip = str("13.72.105.31")
-api = requests.post("http://www.whoisip.org/whois", data=ip)
 
-json_api = Response.json
+def api_request(**kwargs):
+    requests.post("http://www.whoisip.org/whois", params=ip, **kwargs)
+    
+
+    return api_request()
+
+#api = requests.post("#post-18 > div.post-inner > div.post-content > script:nth-child(2)", data=ip)
+
+#print(api)
+
+api_request()
